@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LightUp</string>
+    <string name="header_status">Status</string>
+    <string name="permission_gr">Permission Granted</string>
+    <string name="permission_dn">Permission Denied Permanently</string>
+    <string name="OnState">On</string>
+    <string name="OffState">Off</string>
+    <string name="errorledturningon">It seems like your phone has a problem of turning on the LED.Please report this as a bug and we will fix this ASAP</string>
+</resources>
