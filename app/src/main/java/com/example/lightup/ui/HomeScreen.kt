@@ -202,17 +202,15 @@ private fun LifecyleObservers(permission: PermissionState, systemSensor: SensorM
                     permission.launchPermissionRequest()
                 }
                 Lifecycle.Event.ON_STOP -> {
-                    systemSensor?.getDefaultSensor(Sensor.TYPE_ACCELEROMETER).also { out ->
-                        systemSensor?.unregisterListener(listeners)
-                    }
+                    systemSensor?.unregisterListener(listeners)
                 }
                 Lifecycle.Event.ON_RESUME -> {
                     systemSensor?.getDefaultSensor(Sensor.TYPE_ACCELEROMETER).also { out ->
                         systemSensor?.registerListener(
                             listeners,
                             out,
-                            SensorManager.SENSOR_DELAY_FASTEST,
-                            SensorManager.SENSOR_DELAY_FASTEST
+                            SensorManager.SENSOR_DELAY_NORMAL,
+                            SensorManager.SENSOR_DELAY_NORMAL
                         )
                     }
                 }
