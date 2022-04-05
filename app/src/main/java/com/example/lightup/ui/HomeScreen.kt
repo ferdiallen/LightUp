@@ -6,8 +6,6 @@ import android.hardware.Sensor
 import android.hardware.SensorEvent
 import android.hardware.SensorEventListener
 import android.hardware.SensorManager
-import android.util.Log
-import android.widget.Toast
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -178,8 +176,8 @@ private fun MainDisplay(context: Context, systemSensor: SensorManager?, vm: Home
         ) {
             Text(
                 text = "Turn ${
-                    if (vm.lightStatus) context.getString(R.string.OnState) else context.getString(
-                        R.string.OffState
+                    if (vm.lightStatus) context.getString(R.string.OffState) else context.getString(
+                        R.string.OnState
                     )
                 } Flashlight", color = Color.White
             )
